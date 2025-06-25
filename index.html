@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Fashion Forward</title>
+    <meta name="description" content="Discover the latest fashion trends with StyleHub. Shop premium clothing collections curated by fashion experts for style-conscious individuals.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-tshirt"></i>
+                <span>StyleHub</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#testimonials" class="nav-link">Reviews</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <button class="btn-cart" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="btn-primary">
+                    <i class="fas fa-shopping-bag"></i>
+                    Shop Now
+                </button>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="nav-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-circle hero-circle-1"></div>
+            <div class="hero-circle hero-circle-2"></div>
+            <div class="hero-circle hero-circle-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Style with <span class="text-gold">Confidence</span>
+                    </h1>
+                    <p class="hero-description">
+                        Discover premium fashion collections curated by style experts. Join thousands of fashion enthusiasts who trust StyleHub for their wardrobe transformation.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-secondary">
+                            <i class="fas fa-shopping-bag"></i>
+                            Shop Collection
+                        </button>
+                        <button class="btn-outline">
+                            <i class="fas fa-search"></i>
+                            Browse Catalog
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="image-card">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                             alt="Fashion clothing store interior with stylish garments">
+                        <div class="stats">
+                            <div class="stat">
+                                <div class="stat-number" id="customers-count">0</div>
+                                <div class="stat-label">Customers</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number" id="products-count">0</div>
+                                <div class="stat-label">Products</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number" id="brands-count">0</div>
+                                <div class="stat-label">Brands</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose StyleHub?</h2>
+                <p>Experience fashion like never before with our curated collections and premium quality</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon brown">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Handpicked garments from top designers with superior craftsmanship and materials</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon gold">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable shipping with free delivery on orders over $100</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon forest">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day hassle-free returns with full refund guarantee on all items</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Discover our most loved fashion pieces by customers worldwide</p>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Modern web development workspace with code on screen">
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category brown">Programming</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <h3>Full Stack Web Development</h3>
+                        <p>Master modern web development with React, Node.js, and MongoDB</p>
+                        <div class="course-footer">
+                            <span class="course-price">$99</span>
+                            <button class="btn-enroll" onclick="enrollCourse('Full Stack Web Development')">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Data analysis charts and graphs on computer screen">
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category gold">Data Science</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <h3>Data Science & Analytics</h3>
+                        <p>Learn Python, machine learning, and data visualization techniques</p>
+                        <div class="course-footer">
+                            <span class="course-price">$129</span>
+                            <button class="btn-enroll" onclick="enrollCourse('Data Science & Analytics')">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400" 
+                         alt="Digital marketing dashboard with analytics and social media metrics">
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category forest">Marketing</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <h3>Digital Marketing Mastery</h3>
+                        <p>Complete guide to SEO, social media, and content marketing</p>
+                        <div class="course-footer">
+                            <span class="course-price">$79</span>
+                            <button class="btn-enroll" onclick="enrollCourse('Digital Marketing Mastery')">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-footer">
+                <button class="btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About StyleHub</h2>
+                    <p>Founded with the vision of making premium fashion accessible to everyone, StyleHub has been at the forefront of style innovation for over a decade.</p>
+                    <p>Our platform combines cutting-edge fashion curation with time-tested quality standards to create an engaging and satisfying shopping experience that adapts to your style needs.</p>
+                    
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Years of Excellence</div>
+                        </div>
+                        <div class="about-stat">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-label">Customer Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1529720317453-c8da503f2051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" 
+                         alt="Fashion designers collaborating in a modern design studio">
+                    <div class="award-badge">
+                        <div class="award-title">Award Winning</div>
+                        <div class="award-subtitle">Fashion Platform</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Students Say</h2>
+                <p>Real stories from real students who achieved their goals</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"StyleHub completely transformed my wardrobe. The quality is amazing and the styles are always up-to-date with fashion trends."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
+                             alt="Professional headshot of Sarah Chen, a successful student">
+                        <div class="author-info">
+                            <div class="author-name">Sarah Chen</div>
+                            <div class="author-role">Fashion Enthusiast</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"The variety of styles and easy shopping experience with expert curation made all the difference in my fashion journey."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
+                             alt="Professional headshot of Michael Rodriguez, a successful student">
+                        <div class="author-info">
+                            <div class="author-name">Michael Rodriguez</div>
+                            <div class="author-role">Style Blogger</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Outstanding platform with trendy, high-quality pieces. I found my perfect style within 3 months of shopping here!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&h=100" 
+                             alt="Professional headshot of Emily Johnson, a successful student">
+                        <div class="author-info">
+                            <div class="author-name">Emily Johnson</div>
+                            <div class="author-role">Fashion Influencer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get the latest fashion trends, style tips, and exclusive offers delivered to your inbox</p>
+                
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" id="email-input" placeholder="Enter your email" required>
+                    <button type="submit" id="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Company Info -->
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-tshirt"></i>
+                        <span>StyleHub</span>
+                    </div>
+                    <p>Empowering fashion enthusiasts worldwide with premium clothing and expert style guidance.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#testimonials">Reviews</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@stylehub.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Fashion Ave, Style District</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 StyleHub. All rights reserved. | Designed with ❤️ for fashion lovers worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+            <button class="cart-close" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: $<span id="cart-total">0.00</span></span>
+            </div>
+            <button class="btn-checkout" onclick="proceedToCheckout()">
+                <i class="fas fa-credit-card"></i>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-content">
+            <div class="checkout-header">
+                <h2><i class="fas fa-credit-card"></i> Checkout</h2>
+                <button class="checkout-close" onclick="closeCheckout()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <form class="checkout-form" id="checkout-form">
+                <div class="checkout-section">
+                    <h3><i class="fas fa-user"></i> Customer Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="lastName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Shipping Address</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="address">Street Address</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State/Province</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">ZIP/Postal Code</label>
+                            <input type="text" id="zip" name="zip" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="US">United States</option>
+                                <option value="CA">Canada</option>
+                                <option value="UK">United Kingdom</option>
+                                <option value="IN">India</option>
+                                <option value="AU">Australia</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3><i class="fas fa-credit-card"></i> Payment Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardholder">Cardholder Name</label>
+                            <input type="text" id="cardholder" name="cardholder" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-summary">
+                    <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+                    <div id="checkout-items"></div>
+                    <div class="summary-totals">
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="shipping">$9.99</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax:</span>
+                            <span id="tax">$0.00</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total:</span>
+                            <span id="final-total">$0.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-place-order">
+                    <i class="fas fa-lock"></i>
+                    Place Order Securely
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="checkout-overlay" id="checkout-overlay" onclick="closeCheckout()"></div>
+
+    <!-- 3D Scene Container -->
+    <div id="three-scene"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
